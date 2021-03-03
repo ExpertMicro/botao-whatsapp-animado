@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botão whatsapp</title>
+</head>
+<body>
+
+  <!-- Estilo do botão -->
+  <style type="text/css">
+    .whatsapp-plug-icon {
+      position: fixed;
+      z-index: 1000;
+      bottom: 20px;
+      right: 20px;
+      width: 70px;
+      height: 70px;
+      -webkit-border-radius: 50%;
+      cursor: pointer;
+      background-color: #0ba360;
+      transition: .3s;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(https://adsconcept.com.br/wp-content/uploads/2020/10/Whatsapp_AdsConcept.png);
+      background-size: 50% auto;
+    }
+
+    .whatsapp-plug-icon:hover {
+      background-color: #15cc74;
+    }
+
+    .whatsapp-plug-icon::after, .whatsapp-plug-icon::before {
+      content: '';
+      position: absolute;
+      opacity: 0;
+      border: 4px solid #0ba360;
+      left: -10px;
+      top: -10px;
+      right: -10px;
+      bottom: -10px;
+      -webkit-border-radius: 50%;
+      animation: WaveWhatsApp 1.5s ease infinite;
+    }
+
+    .whatsapp-plug-icon::after {
+      animation-delay: .5s;
+    }
+    .whatsapp-plug-icon:hover::after {
+      border: 4px solid #15cc74;
+    }
+    .whatsapp-plug-icon:hover::before {
+      border: 4px solid #15cc74;
+    }
+    @keyframes WaveWhatsApp {
+      0%{
+        transform: scale(0.5);
+      }
+      50%{
+        opacity: 1;
+      }
+      100%{
+        transform: scale(1.2);
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <a target="_blank" class="whatsapp-plug-icon" href="https://api.whatsapp.com/send?phone=5519999999999&text=Texto%20aqui"></a>
+
+
+</body>
+</html>
